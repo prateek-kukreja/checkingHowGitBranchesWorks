@@ -29,12 +29,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(null)
-    // console.log(, process.env.BASE_URL)
-    // fetch("http://localhost:5001/test-cors")
-    //     .then(res => res.json())
-    //     .then(console.log)
-    //     .catch(console.error)
-    //     .finally(console.log)
+
     try {
       const res = await fetch(
         process.env.NEXT_PUBLIC_WEB_URL + 'auth/register',
