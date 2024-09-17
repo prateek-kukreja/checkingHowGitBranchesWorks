@@ -54,35 +54,20 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {token ? (
-              <>
-                {/* Sign Out Button */}
+            {/* Sign In and Sign Up Buttons */}
 
-                <button
-                  onClick={handleSignOut}
-                  className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Sign Out
+            <div className="flex items-center px-4 space-x-4">
+              <Link href="/signin">
+                <button className="w-full text-gray-700 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">
+                  Sign In
                 </button>
-              </>
-            ) : (
-              <>
-                {/* Sign In and Sign Up Buttons */}
-
-                <div className="flex items-center px-4 space-x-4">
-                  <Link href="/signin">
-                    <button className="w-full text-gray-700 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">
-                      Sign In
-                    </button>
-                  </Link>
-                  <Link href="/signup">
-                    <button className="w-full bg-teal-500 hover:bg-teal-700 text-white px-3 py-2 rounded-md text-base font-medium">
-                      Sign Up
-                    </button>
-                  </Link>
-                </div>
-              </>
-            )}
+              </Link>
+              <Link href="/signup">
+                <button className="w-full bg-teal-500 hover:bg-teal-700 text-white px-3 py-2 rounded-md text-base font-medium">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
